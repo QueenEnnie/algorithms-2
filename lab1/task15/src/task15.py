@@ -1,4 +1,5 @@
-import os, sys
+import os
+import sys
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
 
@@ -49,8 +50,8 @@ def task15():
     print("Входные данные:")
     print("".join(read_from_file(PATH_INPUT)))
 
-    data = read_from_file(PATH_INPUT)[0].strip()
-    result = max_correct_sequence(data)
+    data = read_from_file(PATH_INPUT)
+    result = max_correct_sequence(data[0].strip()) if len(data) > 0 else ""
     write_in_file(result, PATH_OUTPUT)
 
     print("Выходные данные:")

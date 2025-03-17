@@ -19,7 +19,7 @@ def equal_subsets(numbers):
         for j in range(half, elem - 1, -1):
             if dp[j - elem][0]:
                 dp[j][0] = True
-                dp[j][1] = dp[j - elem][1] + [elem]
+                dp[j][1] = dp[j - elem][1] + [i + 1]
     if not dp[half][0]:
         return -1
     return dp[half][1]

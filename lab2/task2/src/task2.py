@@ -22,6 +22,7 @@ def find_min_height(heights, number, epsilon):
             next_height = 2 * current_height - previous_height + 2
             if next_height <= 0:
                 is_above_ground_flag = False
+                break
             previous_height = current_height
             current_height = next_height
         if is_above_ground_flag:

@@ -51,8 +51,8 @@ def task14():
     print("Входные данные:")
     print("".join(read_from_file(PATH_INPUT)))
 
-    data = read_from_file(PATH_INPUT)[0].strip()
-    result = str(max_expression_value(data))
+    data = read_from_file(PATH_INPUT)
+    result = str(max_expression_value(data[0].strip())) if len(data) > 0 else ""
     write_in_file(result, PATH_OUTPUT)
 
     print("Выходные данные:")

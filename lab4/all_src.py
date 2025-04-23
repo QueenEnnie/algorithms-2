@@ -3,7 +3,7 @@ import os, glob, subprocess
 
 start_dir = os.getcwd()
 project_root = os.path.abspath(os.path.join(os.getcwd(), '..'))
-print("Лабораторная работа №3")
+print("Лабораторная работа №4")
 
 for script in glob.glob("*/src/*.py", recursive=True):
     script_path = os.path.abspath(script)

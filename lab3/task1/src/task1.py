@@ -43,7 +43,6 @@ def task1():
     u, v = map(int, data[-1].split())
     if check_vertexes(edges, vertex_number):
         result = "1" if bfs(u, v, create_adjacency_list(edges, vertex_number)) else "0"
-
     else:
         result = "incorrect input data"
     write_in_file(str(result), PATH_OUTPUT)
